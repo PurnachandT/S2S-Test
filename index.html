@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Test transaction </h2>
+    <script>
+        async function receive_link(){
+            //sending a request to S2 api endpoint
+            const url = await fetch("http://localhost:8001/paydart");
+            const response =await url.json();
+            window.open(response.data);
+        }
+        receive_link();
+    </script>
+</body>
+</html>
